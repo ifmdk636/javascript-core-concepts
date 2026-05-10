@@ -1,3 +1,4 @@
+// Object
 const items = [
   { name: "Bike", price: 100 },
   { name: "TV", price: 200 },
@@ -8,7 +9,7 @@ const items = [
   { name: "Keyboard", price: 25 },
 ];
 
-// 1. Filtered
+// 1. Filter
 const filteredItems = items.filter((item) => {
   return item.price <= 100;
 });
@@ -25,3 +26,14 @@ const foundItem = items.find((item) => {
   return item.name == "Computer";
 });
 console.log(foundItem);
+
+// forEach
+items.forEach((item) => {
+  console.log(item.price);
+});
+
+// reduce
+const total = items.reduce((currentValue, item) => {
+  return item.price + currentValue;
+}, 0);
+console.log(total);
